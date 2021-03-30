@@ -12,8 +12,8 @@ __all__ = ["Oauth"]
 
 class Oauth(object):
     authorization_endpoint = "/oauth/authorize"
-    access_token_endpoint = BASE_ENDPOINT.rstrip("/") + "/oauth/access_token"
-    refresh_token_endpoint = BASE_ENDPOINT.rstrip("/") + "/oauth/refresh_token"
+    access_token_endpoint = OAUTH_BASE_ENDPOINT.rstrip("/") + "/oauth/access_token"
+    refresh_token_endpoint = OAUTH_BASE_ENDPOINT.rstrip("/") + "/oauth/refresh_token"
 
     def __init__(self, client_id, client_secret, redirect_uri, env="PROD"):
         self.client_id = client_id
